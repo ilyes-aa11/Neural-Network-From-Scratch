@@ -3,7 +3,7 @@ import activation
 import loss
 import optimizer
 import numpy as np
-from sklearn.datasets import load_digits # needed to import the dataset for testing
+from sklearn.datasets import load_digits # dataset for hand written digits a lighter version of the mnist dataset
 from sklearn.model_selection import train_test_split # used to split the dataset into training data & testing data
 from sklearn.metrics import accuracy_score # evaluates the final score of the network i.e the percentage of how well it performed
 
@@ -43,9 +43,4 @@ print("Testing loss: ",lossFunction.forward(layer3.activated, y_test))
 y_pred = np.argmax(layer3.activated, axis=1)
 y_test = np.argmax(y_test, axis=1) 
 
-print("accuracy: " ,accuracy_score(y_true=y_test,y_pred=y_pred))
-
-
-
-
-
+print("accuracy: " ,accuracy_score(y_true=y_test,y_pred=y_pred)) # accuracy between 97% to 90%
