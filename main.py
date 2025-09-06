@@ -3,9 +3,9 @@ import activation
 import loss
 import optimizer
 import numpy as np
-from sklearn.datasets import load_digits
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
+from sklearn.datasets import load_digits # needed to import the dataset for testing
+from sklearn.model_selection import train_test_split # used to split the dataset into training data & testing data
+from sklearn.metrics import accuracy_score # evaluates the final score of the network i.e the percentage of how well it performed
 
 digits = load_digits()
 X , y = digits.data, digits.target
