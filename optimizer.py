@@ -39,9 +39,7 @@ def Back_propagate(Layers, layer_index, sample_index, x_train, y_true, learning_
         else:
             deltaW = learning_rate * np.outer(x_train[sample_index], curr_error)
         deltaB = learning_rate * curr_error
-        if np.isnan(deltaW).any() or np.isnan(deltaB).any():
-            print("NaN detected in gradients")
-            exit(1)
+        
         Layers[layer_index].weights -= deltaW
         Layers[layer_index].bias -= deltaB
 
